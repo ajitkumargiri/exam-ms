@@ -1,0 +1,49 @@
+{
+  "name": "Address",
+  "fields": [
+    {
+      "fieldName": "addressLine1",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "addressLine2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "po",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ps",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "city",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "state",
+      "fieldType": "State",
+      "fieldValues": "ANDHRA_PRADESH,ARUNACHAL_PRADESH,ASSAM,BIHAR,CHHATTISGARH,GOA,GUJARAT,HARYANA,HIMACHAL_PRADESH,JAMMU_AND_KASHMIR,JHARKHAND,KARNATAKA,KERALA,MADHYA_PRADESH,MAHARASHTRA,MANIPUR,MEGHALAYA,MIZORAM,NAGALAND,ODISHA,PUNJAB,RAJASTHAN,SIKKIM,TAMIL_NADU,TELANGANA,TRIPURA,UTTARAKHAND,UTTAR_PRADESH,WEST_BENGAL,ANDAMAN_AND_NICOBAR_ISLANDS,CHANDIGARH,DADRA_AND_NAGAR_HAVELI,DAMAN_AND_DIU,DELHI,LAKSHADWEEP,PUDUCHERRY",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "pin",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "address",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210704143528"
+}

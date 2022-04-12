@@ -43,6 +43,21 @@
     "devServerPort": 4200,
     "clientPackageManager": "npm",
     "languages": ["en", "fr"],
-    "cypressCoverage": false
+    "cypressCoverage": false,
+    "entities": [
+      "University",
+      "College",
+      "Course",
+      "Branch",
+      "AcademicBatch",
+      "Session",
+      "Student",
+      "Address",
+      "Exam",
+      "ExamApplicationForm",
+      "SubjectPaper",
+      "ExamCenter"
+    ],
+    "lastLiquibaseTimestamp": 1625409332000
   }
 }

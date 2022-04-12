@@ -1,0 +1,76 @@
+{
+  "name": "Exam",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "ExamType",
+      "fieldValues": "REGULAR (Regular),EX_REGULAR (ExRegular)",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "startTime",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "endTime",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "address",
+      "otherEntityRelationshipName": "exam",
+      "relationshipName": "correspondingAddress",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "address",
+      "otherEntityRelationshipName": "exam",
+      "relationshipName": "permanentAddress",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "examApplicationForm",
+      "otherEntityRelationshipName": "exam",
+      "relationshipName": "applicationForm"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "examCenter",
+      "otherEntityRelationshipName": "exam",
+      "relationshipName": "examCenter"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "session",
+      "otherEntityRelationshipName": "exam",
+      "relationshipName": "session"
+    }
+  ],
+  "entityTableName": "exam",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210704143529"
+}

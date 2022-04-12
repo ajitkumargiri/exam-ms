@@ -1,0 +1,86 @@
+<div class="container mb-5">
+  <div class="grid-margin card mt-4">
+    <div class="row no-gutters">
+      <div class="col-lg-5 contact-info__wrapper gradient-brand-color p-5 order-lg-2 mb-2">
+        <h3 class="color--white mb-5">Steps to follow</h3>
+
+        <table class="plain">
+          <tr>
+            <td>
+              <ol>
+                <li>
+                  <p>Download the empty file</p>
+                  <a target="_blank" href="./content/studentWorkBook.csv"> Click here to download </a>
+                </li>
+                <li>
+                  <p>Do not delete header line</p>
+                </li>
+                <li>
+                  <p>Add all values according to header</p>
+                </li>
+                <li>
+                  <p>Browse that file and click Upload button</p>
+                </li>
+              </ol>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="col-lg-7 contact-form__wrapper p-5 order-lg-1">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="d-flex justify-content-between">
+              <h3 class="color--white mb-5">Export students from csv file</h3>
+              <div>
+                <a class="btn btn-primary" target="_blank" href="./content/studentWorkBook.csv"> Dowload Empty file </a>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-8">
+                <label class="btn btn-default p-0">
+                  <input type="file" (change)="selectFile($event)" />
+                </label>
+              </div>
+
+              <div class="col-4">
+                <button class="btn btn-primary" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+              </div>
+            </div>
+
+            <div *ngIf="currentFile" class="progress my-3">
+              <div
+                class="progress-bar progress-bar-info progress-bar-striped"
+                role="progressbar"
+                attr.aria-valuenow="{{ progress }}"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                [ngStyle]="{ width: progress + '%' }"
+              >
+                {{ progress }}%
+              </div>
+            </div>
+
+            <div *ngIf="message" class="alert" role="alert alert-primary">{{ message }}</div>
+
+            <!--     <div class="card mt-3">
+              <div class="card-header">List of Files</div>
+              <ul class="list-group list-group-flush" *ngFor="let file of fileInfos | async">
+                <li class="list-group-item">
+                  <a href="{{ file.url }}">{{ file.name }}</a>
+                </li>
+              </ul>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- End Contact Form Wrapper -->
+    </div>
+    <div class="row no-gutters">
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+      </button>
+    </div>
+  </div>
+</div>

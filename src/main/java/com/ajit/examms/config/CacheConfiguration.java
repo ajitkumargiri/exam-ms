@@ -48,6 +48,30 @@ public class CacheConfiguration {
             createCache(cm, com.ajit.examms.domain.User.class.getName());
             createCache(cm, com.ajit.examms.domain.Authority.class.getName());
             createCache(cm, com.ajit.examms.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.ajit.examms.domain.University.class.getName());
+            createCache(cm, com.ajit.examms.domain.University.class.getName() + ".colleges");
+            createCache(cm, com.ajit.examms.domain.College.class.getName());
+            createCache(cm, com.ajit.examms.domain.College.class.getName() + ".courses");
+            createCache(cm, com.ajit.examms.domain.Course.class.getName());
+            createCache(cm, com.ajit.examms.domain.Course.class.getName() + ".branches");
+            createCache(cm, com.ajit.examms.domain.Branch.class.getName());
+            createCache(cm, com.ajit.examms.domain.Branch.class.getName() + ".academicBatches");
+            createCache(cm, com.ajit.examms.domain.AcademicBatch.class.getName());
+            createCache(cm, com.ajit.examms.domain.AcademicBatch.class.getName() + ".sessions");
+            createCache(cm, com.ajit.examms.domain.AcademicBatch.class.getName() + ".students");
+            createCache(cm, com.ajit.examms.domain.Session.class.getName());
+            createCache(cm, com.ajit.examms.domain.Session.class.getName() + ".exams");
+            createCache(cm, com.ajit.examms.domain.Session.class.getName() + ".subjectPapers");
+            createCache(cm, com.ajit.examms.domain.Student.class.getName());
+            createCache(cm, com.ajit.examms.domain.Student.class.getName() + ".examApplicationForms");
+            createCache(cm, com.ajit.examms.domain.Address.class.getName());
+            createCache(cm, com.ajit.examms.domain.Exam.class.getName());
+            createCache(cm, com.ajit.examms.domain.Exam.class.getName() + ".applicationForms");
+            createCache(cm, com.ajit.examms.domain.Exam.class.getName() + ".examCenters");
+            createCache(cm, com.ajit.examms.domain.ExamApplicationForm.class.getName());
+            createCache(cm, com.ajit.examms.domain.SubjectPaper.class.getName());
+            createCache(cm, com.ajit.examms.domain.ExamCenter.class.getName());
+            createCache(cm, com.ajit.examms.domain.ExamCenter.class.getName() + ".examApplicationForms");
             // jhipster-needle-ehcache-add-entry
         };
     }
